@@ -7,14 +7,18 @@
     <title>Budrysek</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css" href="css/article.css">
+    <link rel="stylesheet" type="text/css" href="css/spaces.css">
 
+
+    <link rel="stylesheet" type="text/css" href="css/app.css">
 
 </head>
 
 <body>
     <div id="app">
-        <example-component />
+        <app></app>
     </div>
     <script src="js/app.js" type="text/javascript"></script>
 </body>
