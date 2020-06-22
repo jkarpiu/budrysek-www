@@ -43,6 +43,7 @@ return [
 
     'models' => [
         'namespace' => 'App\news',
+        'namespace' => 'App\prodeges'
     ],
 
     /*
@@ -104,7 +105,7 @@ return [
         /*
          * Select default language
          */
-        'default' => 'en',
+        'default' => 'pl',
 
         /*
          * Select languages that are supported.
