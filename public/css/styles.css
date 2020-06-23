@@ -9868,12 +9868,12 @@ button.bg-dark:focus {
     color: #fff !important;
 }
 
-.text-primary {
+.text-primary-y {
     color: #fed136 !important;
 }
 
-a.text-primary:hover,
-a.text-primary:focus {
+a.text-primary-y:hover,
+a.text-primary-y:focus {
     color: #e6b301 !important;
 }
 
@@ -10269,4 +10269,8 @@ header.masthead .masthead-heading {
     text-align: center;
     font-size: 0.9rem;
     font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.router-link-active {
+    text-decoration: none !important;
 }

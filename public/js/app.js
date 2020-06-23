@@ -38478,7 +38478,7 @@ var staticRenderFns = [
                 _vm._v(
                   "\n                    Podaruj nam\n                    "
                 ),
-                _c("span", { staticClass: "text-primary" }, [_vm._v("1%")]),
+                _c("span", { staticClass: "text-primary-y" }, [_vm._v("1%")]),
                 _vm._v(" twojego dobra\n                    "),
                 _c("br"),
                 _vm._v(" "),

@@ -52,7 +52,7 @@
                     <h5>Wesprzyj nas</h5>
                     <p class="text-gray">
                         Podaruj nam
-                        <span class="text-primary">1%</span> twojego dobra
+                        <span class="text-primary-y">1%</span> twojego dobra
                         <br />
                         <span class="text-underline">KRS 000398339</span>
                     </p>
