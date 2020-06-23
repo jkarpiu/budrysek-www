@@ -1,4 +1,4 @@
-$(".js-scroll-trigger").click(function() {
+$(".js-scroll-trigger").click(() => {
     $(".navbar-collapse").collapse("hide");
 });
 
@@ -7,7 +7,7 @@ $("body").scrollspy({
     offset: 74
 });
 
-var navbarCollapse = function() {
+var navbarCollapse = () => {
     if ($("#mainNav").offset().top > 80) {
         $("#mainNav").addClass("navbar-shrink");
     } else {
@@ -17,3 +17,13 @@ var navbarCollapse = function() {
 
 navbarCollapse();
 $(window).scroll(navbarCollapse);
+
+if (!$(".hamburger").hasClass("collapsed")) {
+    $(".hamburger").click(() => {
+        $(".hamburger").toggleClass("opened");
+    });
+} else {
+    $(".hamburger").click(() => {
+        $(".hamburger").toggleClass("opened");
+    });
+}

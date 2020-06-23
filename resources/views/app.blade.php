@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="css/article.css">
     <link rel="stylesheet" type="text/css" href="css/spaces.css">
 
+    <!-- Favicon -->
+    <link rel="shortcut icon" type='image/x-icon' href="assets/img/favicon-white.ico" />
 
     <link rel="stylesheet" type="text/css" href="css/app.css">
 
