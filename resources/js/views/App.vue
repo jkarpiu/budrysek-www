@@ -1,12 +1,18 @@
 <template>
     <div>
-        <budrysek-navbar />
-        <div class="container" style="height: 200vh; margin-top:150px;">
-            <router-view></router-view>
+        <Navbar />
+        <Header />
+        <div class="container">
+            <div class="row">
+                <Content />
+            </div>
+            <div class="row">
+                <Comments />
+            </div>
         </div>
-        <budrysek-footer />
+        <Footer />
     </div>
 </template>
 <script>
-    export default {}
+export default {};
 </script>

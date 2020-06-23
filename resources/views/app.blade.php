@@ -20,7 +20,7 @@
     <div id="app">
         <app></app>
     </div>
-    <script src="js/app.js" type="text/javascript"></script>
+    <script defer src="js/app.js" type="text/javascript"></script>
 </body>
 
 </html>
