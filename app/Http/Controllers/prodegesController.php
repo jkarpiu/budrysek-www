@@ -7,7 +7,7 @@ use App\prodeges;
 
 class prodegesController extends Controller
 {
-    public funtion list() {
+    public function list() {
     	return response() -> json(prodeges:orderBy('id')->get());
     }
 }

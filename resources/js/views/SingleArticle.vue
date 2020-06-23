@@ -1,15 +1,28 @@
 <template>
     <div>
-        <Navbar />
-        <Header />
+
+        <Header class="headerImage" />
         <div class="container">
             <div class="row">
-                <Content />
+                <Content v-bind:text="du"/>
             </div>
             <div class="row">
                 <Comments />
             </div>
         </div>
-        <Footer />
     </div>
 </template>
+<script>
+export default {
+    data() {
+        return {
+            du: "llubie testować"
+        }
+    }
+}
+</script>
+<style scoped>
+    .container {
+        align-self: center;
+    }
+</style>

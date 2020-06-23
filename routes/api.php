@@ -18,6 +18,8 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/news', 'list@newsController');
+Route::get('/news', 'newsController@list');
 
-Route::get('/prodeges', 'list@prodegesController');
+Route::get('/prodeges', 'prodegesController@list');
+
+Route::get('/content', 'pagesController@list');

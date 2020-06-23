@@ -4,3 +4,8 @@
         <div class="masthead-heading text-uppercase">Tytuł</div>
     </header>
 </template>
+<style scoped>
+    .masthead {
+        width: 100vw;
+    }
+</style>

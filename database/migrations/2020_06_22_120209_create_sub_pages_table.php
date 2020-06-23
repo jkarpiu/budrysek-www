@@ -15,6 +15,11 @@ class CreateSubPagesTable extends Migration
     {
         Schema::create('sub_pages', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('displayName');
+            $table->string('backgroundPhoto');
+            $table->longText('content');
+            $table->longText('styling');
             $table->timestamps();
         });
     }

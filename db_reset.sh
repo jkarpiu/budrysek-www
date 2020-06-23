@@ -10,6 +10,7 @@ php artisan db:seed --class=MenuItemsTableSeeder
 php artisan db:seed --class=RolesTableSeeder
 php artisan db:seed --class=PermissionsTableSeeder
 php artisan db:seed --class=PermissionRoleTableSeeder
+php artisan db:seed --class=PagesSeeder
 
 echo "Wszystko wyseedowane"
 echo "Tworze użytkownika admin@admin.pl"
