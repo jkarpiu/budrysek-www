@@ -1,11 +1,11 @@
 <template>
     <div class="col-md-12">
         <div class="post-content">
-            <span class="bold">
+            <span class="font-weight-bold">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi,
                 quibusdam.
             </span>
-            <span class="normal">
+            <span>
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt
                 blanditiis repellendus fugit dignissimos aliquam. Quidem,
                 reprehenderit adipisci possimus inventore enim eaque quo sint

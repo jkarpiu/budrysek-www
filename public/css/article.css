@@ -14,29 +14,9 @@ div.post-content {
 }
 
 div.post-content span {
-    font-size: 1.2em;
+    font-size: 1.3em;
     display: block;
     padding: 10px 20px;
-}
-
-.bold {
-    font-weight: bold;
-}
-
-.normal {
-    font-weight: 400;
-}
-
-.orange {
-    color: #ffa500;
-}
-
-.brown {
-    color: #a62b2b;
-}
-
-.blue {
-    color: #006eff;
 }
 
 div.comments {
@@ -45,8 +25,6 @@ div.comments {
 }
 
 div.comments h4 {
-    font-weight: bold;
-    text-decoration: underline;
     margin-bottom: 30px;
 }
 
@@ -67,11 +45,12 @@ span.single-comment .name {
 }
 
 span.single-comment .wrote {
-    opacity: .4;
+    opacity: 0.4;
 }
 
 span.single-comment .comment-content {
     margin-top: 8px;
+    font-size: 1rem;
     display: block;
 }
 
