@@ -4,11 +4,11 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-require('./bootstrap');
+require("./bootstrap");
 
-window.Vue = require('vue');
-import VueRouter from 'vue-router'
-Vue.use(VueRouter)
+window.Vue = require("vue");
+import VueRouter from "vue-router";
+Vue.use(VueRouter);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -17,34 +17,45 @@ Vue.use(VueRouter)
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-const files = require.context('./components/', true, /\.vue$/i)
-files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
+const files = require.context("./components/", true, /\.vue$/i);
+files.keys().map(key =>
+    Vue.component(
+        key
+        .split("/")
+        .pop()
+        .split(".")[0],
+        files(key).default
+    )
+);
 
-
-import App from './views/App'
+import App from "./views/App";
 /**
  * Next, we will create a fresh Vue application instance and attach it to
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 const router = new VueRouter({
-    mode: 'history',
-    routes: [
-        {
-            path: '/',
-            name: 'home',
-            component: require('./views/Hello.vue').default
+    mode: "history",
+    routes: [{
+            path: "/",
+            name: "homepage",
+            component: require("./views/Homepage.vue").default
         },
         {
-            path: '/hello',
-            name: 'hello',
-            component: require('./views/Home.vue').default
+            path: "/hello",
+            name: "hello",
+            component: require("./views/Home.vue").default
         },
-    ],
+        {
+            path: "/articles",
+            name: "single-article",
+            component: require("./views/SingleArticle.vue").default
+        }
+    ]
 });
 
 const app = new Vue({
-    el: '#app',
+    el: "#app",
     components: { App },
     router
 });
