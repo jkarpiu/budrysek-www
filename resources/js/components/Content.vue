@@ -21,14 +21,13 @@
                 hic voluptatem incidunt numquam quaerat. Laboriosam, laudantium
                 incidunt?
             </span>
-
-            <h4>Custom content</h4>
-            <p>{{ text }}</p>
+            <span>{{ text }}</span>
         </div>
     </div>
 </template>
 <script>
 export default {
-    props: [ 'text' ]
-}
+    props: ["text"]
+};
 </script>
+

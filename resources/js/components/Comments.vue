@@ -5,7 +5,7 @@
             <span class="single-comment">
                 <img
                     src="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043251-avatar-female-girl-woman_113291.png"
-                    alt=""
+                    alt
                     class="avatar"
                 />
                 <span class="name">Agata</span>
@@ -19,7 +19,7 @@
             <span class="single-comment">
                 <img
                     src="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png"
-                    alt=""
+                    alt
                     class="avatar"
                 />
                 <span class="name">Adam</span>
@@ -38,7 +38,7 @@
             <span class="single-comment">
                 <img
                     src="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043240-avatar-bad-breaking-chemisrty-heisenberg_113279.png"
-                    alt=""
+                    alt
                     class="avatar"
                 />
                 <span class="name">Konrad</span>

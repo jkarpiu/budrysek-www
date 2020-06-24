@@ -1,9 +1,7 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" id="brand" href="/"
-                >budrysek</a
-            >
+            <a class="navbar-brand js-scroll-trigger" id="brand" href="/">budrysek</a>
             <button
                 class="navbar-toggler navbar-toggler-right hamburger"
                 type="button"
@@ -19,45 +17,27 @@
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
                         <router-link :to="{ name: 'about' }">
-                            <a
-                                class="nav-link js-scroll-trigger"
-                                href="/aboutus"
-                                >O nas</a
-                            >
+                            <a class="nav-link js-scroll-trigger" href="/aboutus">O nas</a>
                         </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{ name: 'home' }">
-                            <a
-                                class="nav-link js-scroll-trigger"
-                                href="/actions"
-                                >Nasze akcje</a
-                            >
+                            <a class="nav-link js-scroll-trigger" href="/actions">Nasze akcje</a>
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/animals"
-                            >Nasi podopieczni</a
-                        >
+                        <a class="nav-link js-scroll-trigger" href="/animals">Nasi podopieczni</a>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{ name: 'single-article' }">
-                            <a
-                                class="nav-link js-scroll-trigger"
-                                href="single-article"
-                                >Aktualności</a
-                            >
+                            <a class="nav-link js-scroll-trigger" href="single-article">Aktualności</a>
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/contact"
-                            >Kontakt</a
-                        >
+                        <a class="nav-link js-scroll-trigger" href="/contact">Kontakt</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/help"
-                            >Wsparcie</a
-                        >
+                        <a class="nav-link js-scroll-trigger" href="/help">Wsparcie</a>
                     </li>
                 </ul>
             </div>

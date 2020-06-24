@@ -6,7 +6,7 @@
                     <a class="footer-brand" href="#">
                         <img src="assets/img/brand/brand.png" alt="Brand logo footer" />
                     </a>
-                    <p class="mt-3 text-gray">Fundacja Zwierząt Skrzywdzonych i porzuconych</p>
+                    <p class="mt-3 text-gray">Fundacja Zwierząt Skrzywdzonych i Porzuconych</p>
                 </div>
                 <div class="col-sm-6 col-md-3 col-lg-2 mt-4 mt-md-0">
                     <h5>O Nas</h5>

@@ -1,10 +1,9 @@
 <template>
     <div>
-
         <Header class="headerImage" />
         <div class="container">
             <div class="row">
-                <Content v-bind:text="du"/>
+                <Content v-bind:text="du" />
             </div>
             <div class="row">
                 <Comments />
@@ -17,12 +16,7 @@ export default {
     data() {
         return {
             du: "llubie testować"
-        }
+        };
     }
-}
+};
 </script>
-<style scoped>
-    .container {
-        align-self: center;
-    }
-</style>

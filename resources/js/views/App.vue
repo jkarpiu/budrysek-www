@@ -1,17 +1,10 @@
 <template>
     <div>
         <Navbar />
-        <div class="container">
-            <router-view ></router-view>
-        </div>
+        <router-view></router-view>
         <Footer />
     </div>
 </template>
 <script>
-    export default {}
+export default {};
 </script>
-<style scoped>
-    .container {
-        margin: 0;
-        padding: 0; }
-</style>
