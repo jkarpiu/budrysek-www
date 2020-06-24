@@ -9,9 +9,12 @@ require("./bootstrap");
 window.Vue = require("vue");
 import VueRouter from "vue-router";
 import Vuex from "vuex";
-import axios from 'axios';
+import Routes from './Routes';
+import ApiController from './ApiController';
+
 Vue.use(VueRouter);
 Vue.use(Vuex);
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -20,8 +23,6 @@ Vue.use(Vuex);
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-const serverAdress = 'http://127.0.0.1:8000/';
-let subpages = {};
 
 const files = require.context("./components/", true, /\.vue$/i);
 files.keys().map(key =>
@@ -34,17 +35,16 @@ files.keys().map(key =>
     )
 );
 
-axios.get(serverAdress + "api/content")
-        .then(res => {subpages = res.data; console.log(res.data)})
-        .catch(err => console.log(err));
+let api = new ApiController.api();
 
 const store = new Vuex.Store(
     {
         state: {
-            subpages: subpages
+            subpages: api
         }
     }
 )
+
 
 import App from "./views/App";
 /**
@@ -54,22 +54,7 @@ import App from "./views/App";
  */
 const router = new VueRouter({
     mode: "history",
-    routes: [{
-            path: "/",
-            name: "homepage",
-            component: require("./views/Homepage.vue").default
-        },
-        {
-            path: "/about",
-            name: "about",
-            component: require("./views/About.vue").default
-        },
-        {
-            path: "/articles",
-            name: "single-article",
-            component: require("./views/SingleArticle.vue").default
-        }
-    ]
+    routes: Routes.Routes
 });
 
 const app = new Vue({

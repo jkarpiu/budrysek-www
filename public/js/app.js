@@ -1919,24 +1919,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["text"]
+  props: ["article"]
 });
 
 /***/ }),
@@ -1984,11 +1968,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      myData: this.$store.state.subpages[0].content
+      myData: this.$store.state.subpages.subpages
     };
+  },
+  created: function created() {
+    console.log(this.myData);
   }
 });
 
@@ -38346,13 +38339,7 @@ var render = function() {
         )
       ]),
       _vm._v(" "),
-      _c("span", [
-        _vm._v(
-          "\n            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt\n            blanditiis repellendus fugit dignissimos aliquam. Quidem,\n            reprehenderit adipisci possimus inventore enim eaque quo sint\n            eius necessitatibus illum mollitia vitae, aut commodi quod\n            nostrum repellendus deleniti blanditiis quos, quam architecto\n            fugiat temporibus sapiente! Dolorem cupiditate harum unde modi\n            inventore. Optio accusamus consectetur, aliquam maiores\n            consequuntur vero numquam nostrum iusto doloremque quis?\n            Asperiores, ut vel? Iste deleniti accusantium dolore voluptas\n            cum, molestias fugiat debitis aliquam! Consequuntur ipsa ipsum\n            ratione. Nisi, eaque non omnis explicabo asperiores autem\n            voluptatem culpa, quidem eos qui quod amet voluptatibus! Dicta\n            hic voluptatem incidunt numquam quaerat. Laboriosam, laudantium\n            incidunt?\n        "
-        )
-      ]),
-      _vm._v(" "),
-      _c("span", [_vm._v(_vm._s(_vm.text))])
+      _c("span", { domProps: { innerHTML: _vm._s(_vm.article) } })
     ])
   ])
 }
@@ -38826,7 +38813,16 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Content", { attrs: { text: _vm.myData } })
+  return _c(
+    "div",
+    _vm._l(_vm.myData, function(article) {
+      return _c("Content", {
+        key: article.id,
+        attrs: { article: article.content }
+      })
+    }),
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -55232,6 +55228,93 @@ module.exports = function(module) {
 
 /***/ }),
 
+/***/ "./resources/js/ApiController.js":
+/*!***************************************!*\
+  !*** ./resources/js/ApiController.js ***!
+  \***************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Config__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Config */ "./resources/js/Config.js");
+/* harmony import */ var _Config__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_Config__WEBPACK_IMPORTED_MODULE_1__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  api: /*#__PURE__*/function () {
+    function api() {
+      _classCallCheck(this, api);
+
+      this.subpages = {};
+      this.getPages();
+    }
+
+    _createClass(api, [{
+      key: "getPages",
+      value: function getPages() {
+        var _this = this;
+
+        axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(_Config__WEBPACK_IMPORTED_MODULE_1___default.a.config.serverAdress + "api/content").then(function (res) {
+          res.data.forEach(function (page) {
+            _this.subpages[page.name] = page;
+          });
+        })["catch"](function (err) {
+          return console.log(err);
+        });
+      }
+    }]);
+
+    return api;
+  }()
+});
+
+/***/ }),
+
+/***/ "./resources/js/Config.js":
+/*!********************************!*\
+  !*** ./resources/js/Config.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+exports.config = {
+  serverAdress: 'http://127.0.0.1:8000/'
+};
+
+/***/ }),
+
+/***/ "./resources/js/Routes.js":
+/*!********************************!*\
+  !*** ./resources/js/Routes.js ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports.Routes = [{
+  path: "/",
+  name: "homepage",
+  component: __webpack_require__(/*! ./views/Homepage.vue */ "./resources/js/views/Homepage.vue")["default"]
+}, {
+  path: "/about",
+  name: "about",
+  component: __webpack_require__(/*! ./views/About.vue */ "./resources/js/views/About.vue")["default"]
+}, {
+  path: "/articles",
+  name: "single-article",
+  component: __webpack_require__(/*! ./views/SingleArticle.vue */ "./resources/js/views/SingleArticle.vue")["default"]
+}];
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -55243,9 +55326,10 @@ module.exports = function(module) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js");
 /* harmony import */ var vuex__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _views_App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./views/App */ "./resources/js/views/App.vue");
+/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Routes */ "./resources/js/Routes.js");
+/* harmony import */ var _Routes__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_Routes__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _ApiController__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ApiController */ "./resources/js/ApiController.js");
+/* harmony import */ var _views_App__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./views/App */ "./resources/js/views/App.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -55254,6 +55338,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
 
 
 
@@ -55267,23 +55352,15 @@ Vue.use(vuex__WEBPACK_IMPORTED_MODULE_1__["default"]);
  * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
  */
 
-var serverAdress = 'http://127.0.0.1:8000/';
-var subpages = {};
-
 var files = __webpack_require__("./resources/js/components sync recursive \\.vue$/");
 
 files.keys().map(function (key) {
   return Vue.component(key.split("/").pop().split(".")[0], files(key)["default"]);
 });
-axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(serverAdress + "api/content").then(function (res) {
-  subpages = res.data;
-  console.log(res.data);
-})["catch"](function (err) {
-  return console.log(err);
-});
+var api = new _ApiController__WEBPACK_IMPORTED_MODULE_3__["default"].api();
 var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
   state: {
-    subpages: subpages
+    subpages: api
   }
 });
 
@@ -55295,24 +55372,12 @@ var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
 
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
   mode: "history",
-  routes: [{
-    path: "/",
-    name: "homepage",
-    component: __webpack_require__(/*! ./views/Homepage.vue */ "./resources/js/views/Homepage.vue")["default"]
-  }, {
-    path: "/about",
-    name: "about",
-    component: __webpack_require__(/*! ./views/About.vue */ "./resources/js/views/About.vue")["default"]
-  }, {
-    path: "/articles",
-    name: "single-article",
-    component: __webpack_require__(/*! ./views/SingleArticle.vue */ "./resources/js/views/SingleArticle.vue")["default"]
-  }]
+  routes: _Routes__WEBPACK_IMPORTED_MODULE_2___default.a.Routes
 });
 var app = new Vue({
   el: "#app",
   components: {
-    App: _views_App__WEBPACK_IMPORTED_MODULE_3__["default"]
+    App: _views_App__WEBPACK_IMPORTED_MODULE_4__["default"]
   },
   router: router,
   store: store
@@ -56049,8 +56114,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/kamilk/GitHub/budrysek-www/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/kamilk/GitHub/budrysek-www/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/karp/Dokumenty/budrysek/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/karp/Dokumenty/budrysek/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
