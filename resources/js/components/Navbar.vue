@@ -1,10 +1,17 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
+<<<<<<< HEAD
             <router-link :to="{ name: 'homepage'}">
             <a class="navbar-brand js-scroll-trigger" id="brand" href="/">budrysek</a>
            </router-link>
            <button
+=======
+            <router-link :to="{ name: 'homepage' }">
+                <a class="navbar-brand js-scroll-trigger" id="brand" href="/">budrysek</a>
+            </router-link>
+            <button
+>>>>>>> 31e11c1979455658253a3605b2b747ccea59249d
                 class="navbar-toggler navbar-toggler-right hamburger"
                 type="button"
                 data-toggle="collapse"

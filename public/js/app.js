@@ -2123,6 +2123,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -38826,6 +38830,19 @@ var render = function() {
         "div",
         { staticClass: "container" },
         [
+          _vm._v("\n<<<<<<< HEAD\n            "),
+          _c("router-link", { attrs: { to: { name: "homepage" } } }, [
+            _c(
+              "a",
+              {
+                staticClass: "navbar-brand js-scroll-trigger",
+                attrs: { id: "brand", href: "/" }
+              },
+              [_vm._v("budrysek")]
+            )
+          ]),
+          _vm._v(" "),
+          _vm._v("\n=======\n            "),
           _c("router-link", { attrs: { to: { name: "homepage" } } }, [
             _c(
               "a",
@@ -38924,21 +38941,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "navbar-toggler navbar-toggler-right hamburger",
-        attrs: {
-          type: "button",
-          "data-toggle": "collapse",
-          "data-target": "#navbarResponsive",
-          "aria-controls": "navbarResponsive",
-          "aria-expanded": "false",
-          "aria-label": "Toggle navigation"
-        }
-      },
-      [_c("i", { staticClass: "fas fa-bars ml-1" })]
-    )
+    return _c("button", [
+      _vm._v(
+        '>>>>>> 31e11c1979455658253a3605b2b747ccea59249d\n                class="navbar-toggler navbar-toggler-right hamburger"\n                type="button"\n                data-toggle="collapse"\n                data-target="#navbarResponsive"\n                aria-controls="navbarResponsive"\n                aria-expanded="false"\n                aria-label="Toggle navigation"\n            >\n                '
+      ),
+      _c("i", { staticClass: "fas fa-bars ml-1" })
+    ])
   },
   function() {
     var _vm = this
@@ -39091,7 +39099,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("Header", {
+    staticStyle: { "background-image": "url('../assets/img/bg-homepage.jpg')" }
+  })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -39118,6 +39128,7 @@ var render = function() {
   return _c(
     "div",
     [
+      _vm._v("\n<<<<<<< HEAD\n        "),
       _c("Header", {
         staticClass: "headerImage",
         attrs: {
@@ -39126,7 +39137,16 @@ var render = function() {
           image: "../assets/img/pinkguy.png"
         }
       }),
-      _vm._v(" "),
+      _vm._v("\n=======\n        "),
+      _c("Header", {
+        staticClass: "headerImage",
+        attrs: {
+          title: "Lorem",
+          subtitle: "Ipsum",
+          image: "../assets/img/bg.jpg"
+        }
+      }),
+      _vm._v("\n>>>>>>> 31e11c1979455658253a3605b2b747ccea59249d\n        "),
       _c("div", { staticClass: "container" }, [
         _c(
           "div",
