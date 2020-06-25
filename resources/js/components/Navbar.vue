@@ -1,7 +1,9 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand js-scroll-trigger" id="brand" href="/">budrysek</a>
+            <router-link :to="{ name: 'homepage' }">
+                <a class="navbar-brand js-scroll-trigger" id="brand" href="/">budrysek</a>
+            </router-link>
             <button
                 class="navbar-toggler navbar-toggler-right hamburger"
                 type="button"

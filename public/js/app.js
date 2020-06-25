@@ -38654,93 +38654,100 @@ var render = function() {
       attrs: { id: "mainNav" }
     },
     [
-      _c("div", { staticClass: "container" }, [
-        _c(
-          "a",
-          {
-            staticClass: "navbar-brand js-scroll-trigger",
-            attrs: { id: "brand", href: "/" }
-          },
-          [_vm._v("budrysek")]
-        ),
-        _vm._v(" "),
-        _vm._m(0),
-        _vm._v(" "),
-        _c(
-          "div",
-          {
-            staticClass: "collapse navbar-collapse",
-            attrs: { id: "navbarResponsive" }
-          },
-          [
-            _c("ul", { staticClass: "navbar-nav text-uppercase ml-auto" }, [
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c("router-link", { attrs: { to: { name: "about" } } }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "nav-link js-scroll-trigger",
-                        attrs: { href: "/aboutus" }
-                      },
-                      [_vm._v("O nas")]
-                    )
-                  ])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c("router-link", { attrs: { to: { name: "home" } } }, [
-                    _c(
-                      "a",
-                      {
-                        staticClass: "nav-link js-scroll-trigger",
-                        attrs: { href: "/actions" }
-                      },
-                      [_vm._v("Nasze akcje")]
-                    )
-                  ])
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _vm._m(1),
-              _vm._v(" "),
-              _c(
-                "li",
-                { staticClass: "nav-item" },
-                [
-                  _c(
-                    "router-link",
-                    { attrs: { to: { name: "single-article" } } },
-                    [
+      _c(
+        "div",
+        { staticClass: "container" },
+        [
+          _c("router-link", { attrs: { to: { name: "homepage" } } }, [
+            _c(
+              "a",
+              {
+                staticClass: "navbar-brand js-scroll-trigger",
+                attrs: { id: "brand", href: "/" }
+              },
+              [_vm._v("budrysek")]
+            )
+          ]),
+          _vm._v(" "),
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "collapse navbar-collapse",
+              attrs: { id: "navbarResponsive" }
+            },
+            [
+              _c("ul", { staticClass: "navbar-nav text-uppercase ml-auto" }, [
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c("router-link", { attrs: { to: { name: "about" } } }, [
                       _c(
                         "a",
                         {
                           staticClass: "nav-link js-scroll-trigger",
-                          attrs: { href: "single-article" }
+                          attrs: { href: "/aboutus" }
                         },
-                        [_vm._v("Aktualności")]
+                        [_vm._v("O nas")]
                       )
-                    ]
-                  )
-                ],
-                1
-              ),
-              _vm._v(" "),
-              _vm._m(2),
-              _vm._v(" "),
-              _vm._m(3)
-            ])
-          ]
-        )
-      ])
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c("router-link", { attrs: { to: { name: "home" } } }, [
+                      _c(
+                        "a",
+                        {
+                          staticClass: "nav-link js-scroll-trigger",
+                          attrs: { href: "/actions" }
+                        },
+                        [_vm._v("Nasze akcje")]
+                      )
+                    ])
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _vm._m(1),
+                _vm._v(" "),
+                _c(
+                  "li",
+                  { staticClass: "nav-item" },
+                  [
+                    _c(
+                      "router-link",
+                      { attrs: { to: { name: "single-article" } } },
+                      [
+                        _c(
+                          "a",
+                          {
+                            staticClass: "nav-link js-scroll-trigger",
+                            attrs: { href: "single-article" }
+                          },
+                          [_vm._v("Aktualności")]
+                        )
+                      ]
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _vm._m(2),
+                _vm._v(" "),
+                _vm._m(3)
+              ])
+            ]
+          )
+        ],
+        1
+      )
     ]
   )
 }
@@ -38881,7 +38888,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div")
+  return _c("Header", {
+    staticStyle: { "background-image": "url('../assets/img/bg-homepage.jpg')" }
+  })
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38913,7 +38922,7 @@ var render = function() {
         attrs: {
           title: "Lorem",
           subtitle: "Ipsum",
-          image: "../assets/img/pinkguy.png"
+          image: "../assets/img/bg.jpg"
         }
       }),
       _vm._v(" "),
@@ -56195,8 +56204,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/karp/Dokumenty/budrysek/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/karp/Dokumenty/budrysek/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/kamilk/GitHub/budrysek-www/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/kamilk/GitHub/budrysek-www/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })

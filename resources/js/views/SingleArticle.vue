@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header class="headerImage" title="Lorem" subtitle="Ipsum" image="../assets/img/pinkguy.png"/>
+        <Header class="headerImage" title="Lorem" subtitle="Ipsum" image="../assets/img/bg.jpg" />
         <div class="container">
             <div class="row">
                 <Content v-bind:article="du" />
