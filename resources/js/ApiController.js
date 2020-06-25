@@ -6,6 +6,7 @@ export default {
         constructor() {
             this.subpages = {};
             this.news = {};
+            this.comments = [];
             this.getPages();
             this.getNews();
         }
@@ -23,11 +24,23 @@ export default {
 
         getNews() {
             axios
-            .get(config.config.serverAdress + "api/news")
-            .then(res => {
-                this.news = res.data
-            })
-            .catch(err => console.log(err));
+                .get(config.config.serverAdress + "api/news")
+                .then(res => {
+                    this.news = res.data
+                })
+                .catch(err => console.log(err));
+        }
+
+        getComments(id) {
+            axios.post(config.config.serverAdress + 'api/comments', {
+                    articleID: id
+                })
+                .then(function (response) {
+                    this.comments = response.data;
+                })
+                .catch(function (error) {
+                    console.log(error.response);
+                });
         }
     }
 };

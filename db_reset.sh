@@ -15,11 +15,12 @@ php artisan db:seed --class=PermissionRoleTableSeeder
 php artisan db:seed --class=PagesSeeder
 
 
-read -p "Chcesz Seedować aktualności? [t/n] " -n 1 -r
+read -p "Chcesz Seedować aktualności i komentarze? [t/n] " -n 1 -r
 echo
 if [[ $REPLY =~ ^[Tt]$ ]]
 then
     php artisan db:seed --class=NewsSeeder
+    php artisan db:seed --class=CommentsSeeder
 fi
 
 echo "Wszystko wyseedowane"

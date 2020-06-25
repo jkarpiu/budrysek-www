@@ -23,3 +23,5 @@ Route::get('/news', 'newsController@list');
 Route::get('/prodeges', 'prodegesController@list');
 
 Route::get('/content', 'pagesController@list');
+
+Route::post('/comments', 'commentsController@list');

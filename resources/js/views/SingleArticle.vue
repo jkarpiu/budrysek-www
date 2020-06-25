@@ -4,14 +4,14 @@
             class="headerImage"
             :title="article.title"
             :subtitle="article.subtitle"
-            image="../assets/img/bg3.jpg"
+            :image="article.backgroundImage"
         />
         <div class="container">
             <div class="row">
                 <Content v-bind:article="article" />
             </div>
             <div class="row">
-                <Comments />
+                <Comments :articleID="article.id"/>
             </div>
         </div>
     </div>

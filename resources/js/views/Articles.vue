@@ -11,6 +11,10 @@ export default {
         return {
             articles: this.$store.state.api.news
         }
+    },
+    created() {
+       // console.log(this.articles) // prints
+       // console.log(this.$store.state.api.news); // also prints
     }
 }
 </script>

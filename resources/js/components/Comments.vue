@@ -51,5 +51,37 @@
                 </span>
             </span>
         </div>
+        <div class="comments">
+            <h4 class="font-weight-bold text-underline">
+                Sekcja komentarzy(testing):
+            </h4>
+            <span :key="comment.id" v-for="comment in comments" class="single-comment">
+                <img
+                    src="https://cdn.icon-icons.com/icons2/1736/PNG/512/4043251-avatar-female-girl-woman_113291.png"
+                    alt
+                    class="avatar"
+                />
+                <span class="name">{{comment.name}}</span>
+                <span class="wrote">napisała:</span>
+                <span v-html="comment.content" class="comment-content">
+
+                </span>
+            </span>
+            <hr />
+        </div>
     </div>
 </template>
+<script>
+export default {
+    props: ['articleID'],
+    data() {
+        return {
+            comments: this.$store.state.api.comments
+        };
+    },
+    created() {
+        this.$store.state.api.getComments(this.articleID);
+        console.log(this.$store.state.api.comments);
+    }
+};
+</script>

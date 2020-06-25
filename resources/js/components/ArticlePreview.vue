@@ -3,10 +3,12 @@
         <router-link :to="{ name: 'article', params: { id: id } }"
             ><h4>{{ article.title }}</h4></router-link
         >
+        <img :src="article.backgroundImage" alt="">
         <span v-html="shortContent"></span>
         <router-link :to="{ name: 'article', params: { id: id } }"
             >Czytaj dalej</router-link
         >
+
     </div>
 </template>
 <script>

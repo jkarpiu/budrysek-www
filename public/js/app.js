@@ -1919,6 +1919,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   props: ["article"],
   data: function data() {
@@ -1932,6 +1934,103 @@ __webpack_require__.r(__webpack_exports__);
       arti = arti.split(" ").splice(0, this.$store.state.config.lengthOfShortArticle).join(" ");
       return arti;
     }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Comments.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Comments.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  props: ['articleID'],
+  data: function data() {
+    return {
+      comments: this.$store.state.api.comments
+    };
+  },
+  created: function created() {
+    this.$store.state.api.getComments(this.articleID);
+    console.log(this.$store.state.api.comments);
   }
 });
 
@@ -2097,6 +2196,9 @@ __webpack_require__.r(__webpack_exports__);
     return {
       articles: this.$store.state.api.news
     };
+  },
+  created: function created() {// console.log(this.articles) // prints
+    // console.log(this.$store.state.api.news); // also prints
   }
 });
 
@@ -38389,6 +38491,8 @@ var render = function() {
         [_c("h4", [_vm._v(_vm._s(_vm.article.title))])]
       ),
       _vm._v(" "),
+      _c("img", { attrs: { src: _vm.article.backgroundImage, alt: "" } }),
+      _vm._v(" "),
       _c("span", { domProps: { innerHTML: _vm._s(_vm.shortContent) } }),
       _vm._v(" "),
       _c(
@@ -38422,84 +38526,125 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("div", { staticClass: "col-md-12" }, [
+    _vm._m(0),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "comments" },
+      [
+        _c("h4", { staticClass: "font-weight-bold text-underline" }, [
+          _vm._v("\n            Sekcja komentarzy(testing):\n        ")
+        ]),
+        _vm._v(" "),
+        _vm._l(_vm.comments, function(comment) {
+          return _c(
+            "span",
+            { key: comment.id, staticClass: "single-comment" },
+            [
+              _c("img", {
+                staticClass: "avatar",
+                attrs: {
+                  src:
+                    "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043251-avatar-female-girl-woman_113291.png",
+                  alt: ""
+                }
+              }),
+              _vm._v(" "),
+              _c("span", { staticClass: "name" }, [
+                _vm._v(_vm._s(comment.name))
+              ]),
+              _vm._v(" "),
+              _c("span", { staticClass: "wrote" }, [_vm._v("napisała:")]),
+              _vm._v(" "),
+              _c("span", {
+                staticClass: "comment-content",
+                domProps: { innerHTML: _vm._s(comment.content) }
+              })
+            ]
+          )
+        }),
+        _vm._v(" "),
+        _c("hr")
+      ],
+      2
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-md-12" }, [
-      _c("div", { staticClass: "comments" }, [
-        _c("h4", { staticClass: "font-weight-bold text-underline" }, [
-          _vm._v("Sekcja komentarzy:")
-        ]),
+    return _c("div", { staticClass: "comments" }, [
+      _c("h4", { staticClass: "font-weight-bold text-underline" }, [
+        _vm._v("Sekcja komentarzy:")
+      ]),
+      _vm._v(" "),
+      _c("span", { staticClass: "single-comment" }, [
+        _c("img", {
+          staticClass: "avatar",
+          attrs: {
+            src:
+              "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043251-avatar-female-girl-woman_113291.png",
+            alt: ""
+          }
+        }),
         _vm._v(" "),
-        _c("span", { staticClass: "single-comment" }, [
-          _c("img", {
-            staticClass: "avatar",
-            attrs: {
-              src:
-                "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043251-avatar-female-girl-woman_113291.png",
-              alt: ""
-            }
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "name" }, [_vm._v("Agata")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "wrote" }, [_vm._v("napisała:")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "comment-content" }, [
-            _vm._v(
-              "\n                Lorem ipsum dolor sit amet consectetur, adipisicing elit.\n                Voluptas, reiciendis.\n            "
-            )
-          ])
-        ]),
+        _c("span", { staticClass: "name" }, [_vm._v("Agata")]),
         _vm._v(" "),
-        _c("hr"),
+        _c("span", { staticClass: "wrote" }, [_vm._v("napisała:")]),
         _vm._v(" "),
-        _c("span", { staticClass: "single-comment" }, [
-          _c("img", {
-            staticClass: "avatar",
-            attrs: {
-              src:
-                "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png",
-              alt: ""
-            }
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "name" }, [_vm._v("Adam")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "wrote" }, [_vm._v("napisał:")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "comment-content" }, [
-            _vm._v(
-              "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                Fugiat praesentium non, dolore aut vitae dolorum quia iure\n                accusantium, inventore laudantium consequuntur quaerat nihil\n                facere quis ipsa dolorem voluptatum in id expedita aliquam.\n                Voluptate non, consequuntur voluptatem omnis suscipit\n                repellendus ipsa beatae quae eligendi eius expedita, nulla,\n                ab libero veritatis commodi.\n            "
-            )
-          ])
-        ]),
+        _c("span", { staticClass: "comment-content" }, [
+          _vm._v(
+            "\n                Lorem ipsum dolor sit amet consectetur, adipisicing elit.\n                Voluptas, reiciendis.\n            "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("span", { staticClass: "single-comment" }, [
+        _c("img", {
+          staticClass: "avatar",
+          attrs: {
+            src:
+              "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043260-avatar-male-man-portrait_113269.png",
+            alt: ""
+          }
+        }),
         _vm._v(" "),
-        _c("hr"),
+        _c("span", { staticClass: "name" }, [_vm._v("Adam")]),
         _vm._v(" "),
-        _c("span", { staticClass: "single-comment" }, [
-          _c("img", {
-            staticClass: "avatar",
-            attrs: {
-              src:
-                "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043240-avatar-bad-breaking-chemisrty-heisenberg_113279.png",
-              alt: ""
-            }
-          }),
-          _vm._v(" "),
-          _c("span", { staticClass: "name" }, [_vm._v("Konrad")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "wrote" }, [_vm._v("napisał:")]),
-          _vm._v(" "),
-          _c("span", { staticClass: "comment-content" }, [
-            _vm._v(
-              "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                Fugiat praesentium non, dolore aut vitae dolorum quia iure\n                accusantium, inventore laudantium consequuntur quaerat nihil\n                facere quis ipsa dolorem voluptatum in id expedita aliquam.\n            "
-            )
-          ])
+        _c("span", { staticClass: "wrote" }, [_vm._v("napisał:")]),
+        _vm._v(" "),
+        _c("span", { staticClass: "comment-content" }, [
+          _vm._v(
+            "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                Fugiat praesentium non, dolore aut vitae dolorum quia iure\n                accusantium, inventore laudantium consequuntur quaerat nihil\n                facere quis ipsa dolorem voluptatum in id expedita aliquam.\n                Voluptate non, consequuntur voluptatem omnis suscipit\n                repellendus ipsa beatae quae eligendi eius expedita, nulla,\n                ab libero veritatis commodi.\n            "
+          )
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("span", { staticClass: "single-comment" }, [
+        _c("img", {
+          staticClass: "avatar",
+          attrs: {
+            src:
+              "https://cdn.icon-icons.com/icons2/1736/PNG/512/4043240-avatar-bad-breaking-chemisrty-heisenberg_113279.png",
+            alt: ""
+          }
+        }),
+        _vm._v(" "),
+        _c("span", { staticClass: "name" }, [_vm._v("Konrad")]),
+        _vm._v(" "),
+        _c("span", { staticClass: "wrote" }, [_vm._v("napisał:")]),
+        _vm._v(" "),
+        _c("span", { staticClass: "comment-content" }, [
+          _vm._v(
+            "\n                Lorem ipsum dolor sit amet consectetur adipisicing elit.\n                Fugiat praesentium non, dolore aut vitae dolorum quia iure\n                accusantium, inventore laudantium consequuntur quaerat nihil\n                facere quis ipsa dolorem voluptatum in id expedita aliquam.\n            "
+          )
         ])
       ])
     ])
@@ -39395,7 +39540,7 @@ var render = function() {
         attrs: {
           title: _vm.article.title,
           subtitle: _vm.article.subtitle,
-          image: "../assets/img/bg3.jpg"
+          image: _vm.article.backgroundImage
         }
       }),
       _vm._v(" "),
@@ -39407,7 +39552,12 @@ var render = function() {
           1
         ),
         _vm._v(" "),
-        _c("div", { staticClass: "row" }, [_c("Comments")], 1)
+        _c(
+          "div",
+          { staticClass: "row" },
+          [_c("Comments", { attrs: { articleID: _vm.article.id } })],
+          1
+        )
       ])
     ],
     1
@@ -54547,6 +54697,21 @@ if (false) {} else {
 
 /***/ }),
 
+/***/ "./node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js":
+/*!*************************************************************************!*\
+  !*** ./node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js ***!
+  \*************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+var r=function(r){return function(r){return!!r&&"object"==typeof r}(r)&&!function(r){var t=Object.prototype.toString.call(r);return"[object RegExp]"===t||"[object Date]"===t||function(r){return r.$$typeof===e}(r)}(r)},e="function"==typeof Symbol&&Symbol.for?Symbol.for("react.element"):60103;function t(r,e){return!1!==e.clone&&e.isMergeableObject(r)?c(Array.isArray(r)?[]:{},r,e):r}function n(r,e,n){return r.concat(e).map(function(r){return t(r,n)})}function o(r){return Object.keys(r).concat(function(r){return Object.getOwnPropertySymbols?Object.getOwnPropertySymbols(r).filter(function(e){return r.propertyIsEnumerable(e)}):[]}(r))}function u(r,e){try{return e in r}catch(r){return!1}}function c(e,i,a){(a=a||{}).arrayMerge=a.arrayMerge||n,a.isMergeableObject=a.isMergeableObject||r,a.cloneUnlessOtherwiseSpecified=t;var f=Array.isArray(i);return f===Array.isArray(e)?f?a.arrayMerge(e,i,a):function(r,e,n){var i={};return n.isMergeableObject(r)&&o(r).forEach(function(e){i[e]=t(r[e],n)}),o(e).forEach(function(o){(function(r,e){return u(r,e)&&!(Object.hasOwnProperty.call(r,e)&&Object.propertyIsEnumerable.call(r,e))})(r,o)||(i[o]=u(r,o)&&n.isMergeableObject(e[o])?function(r,e){if(!e.customMerge)return c;var t=e.customMerge(r);return"function"==typeof t?t:c}(o,n)(r[o],e[o],n):t(e[o],n))}),i}(e,i,a):t(i,a)}c.all=function(r,e){if(!Array.isArray(r))throw new Error("first argument should be an array");return r.reduce(function(r,t){return c(r,t,e)},{})};var i=c;/* harmony default export */ __webpack_exports__["default"] = (function(r){var e=(r=r||{}).storage||window&&window.localStorage,t=r.key||"vuex";(r.assertStorage||function(){e.setItem("@@",1),e.removeItem("@@")})(e);var n,o=function(){return(r.getState||function(r,e){var t;try{return(t=e.getItem(r))&&void 0!==t?JSON.parse(t):void 0}catch(r){}})(t,e)};return r.fetchBeforeUse&&(n=o()),function(u){r.fetchBeforeUse||(n=o()),"object"==typeof n&&null!==n&&(u.replaceState(r.overwrite?n:i(u.state,n,{arrayMerge:r.arrayMerger||function(r,e){return e},clone:!1})),(r.rehydrated||function(){})(u)),(r.subscriber||function(r){return function(e){return r.subscribe(e)}})(u)(function(n,o){(r.filter||function(){return!0})(n)&&(r.setState||function(r,e,t){return t.setItem(r,JSON.stringify(e))})(t,(r.reducer||function(r,e){return Array.isArray(e)?e.reduce(function(e,t){return function(r,e,t,n){return(e=e.split?e.split("."):e).slice(0,-1).reduce(function(r,e){return r[e]=r[e]||{}},r)[e.pop()]=t,r}(e,t,function(r,e,t){return void 0===(r=(e.split?e.split("."):e).reduce(function(r,e){return r&&r[e]},r))?void 0:r}(r,t))},{}):r})(o,r.paths),e)})}});
+//# sourceMappingURL=vuex-persistedstate.es.js.map
+
+
+/***/ }),
+
 /***/ "./node_modules/vuex/dist/vuex.esm.js":
 /*!********************************************!*\
   !*** ./node_modules/vuex/dist/vuex.esm.js ***!
@@ -55752,6 +55917,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
       this.subpages = {};
       this.news = {};
+      this.comments = [];
       this.getPages();
       this.getNews();
     }
@@ -55778,6 +55944,17 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
           _this2.news = res.data;
         })["catch"](function (err) {
           return console.log(err);
+        });
+      }
+    }, {
+      key: "getComments",
+      value: function getComments(id) {
+        axios__WEBPACK_IMPORTED_MODULE_0___default.a.post(_Config__WEBPACK_IMPORTED_MODULE_1___default.a.config.serverAdress + 'api/comments', {
+          articleID: id
+        }).then(function (response) {
+          this.comments = response.data;
+        })["catch"](function (error) {
+          console.log(error.response);
         });
       }
     }]);
@@ -55846,7 +56023,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ApiController__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ApiController */ "./resources/js/ApiController.js");
 /* harmony import */ var _Config__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Config */ "./resources/js/Config.js");
 /* harmony import */ var _Config__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_Config__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _views_App__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./views/App */ "./resources/js/views/App.vue");
+/* harmony import */ var vuex_persistedstate__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! vuex-persistedstate */ "./node_modules/vuex-persistedstate/dist/vuex-persistedstate.es.js");
+/* harmony import */ var _views_App__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./views/App */ "./resources/js/views/App.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -55855,6 +56033,7 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
 
 
 
@@ -55877,6 +56056,7 @@ files.keys().map(function (key) {
 });
 var api = new _ApiController__WEBPACK_IMPORTED_MODULE_3__["default"].api();
 var store = new vuex__WEBPACK_IMPORTED_MODULE_1__["default"].Store({
+  plugins: [Object(vuex_persistedstate__WEBPACK_IMPORTED_MODULE_5__["default"])()],
   state: {
     api: api,
     config: _Config__WEBPACK_IMPORTED_MODULE_4___default.a.config
@@ -55896,7 +56076,7 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
 var app = new Vue({
   el: "#app",
   components: {
-    App: _views_App__WEBPACK_IMPORTED_MODULE_5__["default"]
+    App: _views_App__WEBPACK_IMPORTED_MODULE_6__["default"]
   },
   router: router,
   store: store
@@ -56085,15 +56265,17 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Comments_vue_vue_type_template_id_4aa6d95f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Comments.vue?vue&type=template&id=4aa6d95f& */ "./resources/js/components/Comments.vue?vue&type=template&id=4aa6d95f&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _Comments_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Comments.vue?vue&type=script&lang=js& */ "./resources/js/components/Comments.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Comments_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
   _Comments_vue_vue_type_template_id_4aa6d95f___WEBPACK_IMPORTED_MODULE_0__["render"],
   _Comments_vue_vue_type_template_id_4aa6d95f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
@@ -56107,6 +56289,20 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 if (false) { var api; }
 component.options.__file = "resources/js/components/Comments.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Comments.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/components/Comments.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Comments_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Comments.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Comments.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Comments_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
 
 /***/ }),
 
@@ -56806,8 +57002,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/kamilk/GitHub/budrysek-www/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/kamilk/GitHub/budrysek-www/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/karp/Dokumenty/budrysek/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/karp/Dokumenty/budrysek/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
