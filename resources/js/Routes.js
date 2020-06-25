@@ -12,5 +12,10 @@ exports.Routes = [{
     path: "/articles",
     name: "single-article",
     component: require("./views/SingleArticle.vue").default
+},
+{
+    path: "/article/:id",
+    name: "",
+    component: require("./views/Articles.vue").default
 }
 ]

@@ -1,9 +1,7 @@
 <template>
     <div>
         <Content
-            v-bind:key="article.id"
-            v-for="article in myData"
-            :article="article.content"
+            :article="myData.about"
         />
     </div>
 </template>
@@ -14,8 +12,6 @@ export default {
             myData: this.$store.state.subpages.subpages
         };
     },
-    created() {
-        console.log(this.myData)
-    }
+
 };
 </script>

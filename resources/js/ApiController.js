@@ -5,8 +5,11 @@ export default {
     api: class {
         constructor() {
             this.subpages = {};
+            this.news = {};
             this.getPages();
+            this.getNews();
         }
+
         getPages() {
             axios
                 .get(config.config.serverAdress + "api/content")
@@ -17,5 +20,16 @@ export default {
                 })
                 .catch(err => console.log(err));
         };
+
+        getNews() {
+            axios
+            .get(config.config.serverAdress + "api/news")
+            .then(res => {
+                res.data.forEach(news => {
+                    this.news[news.id] = news;
+                });
+            })
+            .catch(err => console.log(err));
+        }
     }
 };
