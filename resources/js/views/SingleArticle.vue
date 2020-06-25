@@ -1,9 +1,9 @@
 <template>
     <div>
-        <Header class="headerImage" title="Lorem" subtitle="Ipsum" image="../assets/img/pinkguy.png"/>
+        <Header class="headerImage" :title="article.title" :subtitle="article.subtitle" image="../assets/img/pinkguy.png"/>
         <div class="container">
             <div class="row">
-                <Content v-bind:article="du" />
+                <Content v-bind:article="article" />
             </div>
             <div class="row">
                 <Comments />
@@ -15,8 +15,11 @@
 export default {
     data() {
         return {
-            du: "llubie testować"
+            article: this.$store.state.api.news[this.$route.params.id - 1]
         };
+    },
+    created() {
+        console.log(this.article.content)
     }
 };
 </script>

@@ -5,7 +5,7 @@
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Animi,
                 quibusdam.
             </span>
-            <span v-html="article"></span>
+            <span v-html="article.content"></span>
         </div>
     </div>
 </template>

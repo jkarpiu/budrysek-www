@@ -11,6 +11,7 @@ import VueRouter from "vue-router";
 import Vuex from "vuex";
 import Routes from './Routes';
 import ApiController from './ApiController';
+import Config from './Config'
 
 Vue.use(VueRouter);
 Vue.use(Vuex);
@@ -40,7 +41,8 @@ let api = new ApiController.api();
 const store = new Vuex.Store(
     {
         state: {
-            subpages: api
+            api: api,
+            config: Config.config
         }
     }
 )

@@ -9,7 +9,7 @@
 export default {
     data() {
         return {
-            myData: this.$store.state.subpages.subpages
+            myData: this.$store.state.api.subpages
         };
     },
 

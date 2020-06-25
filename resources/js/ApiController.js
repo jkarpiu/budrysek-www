@@ -25,9 +25,7 @@ export default {
             axios
             .get(config.config.serverAdress + "api/news")
             .then(res => {
-                res.data.forEach(news => {
-                    this.news[news.id] = news;
-                });
+                this.news = res.data
             })
             .catch(err => console.log(err));
         }

@@ -28,6 +28,7 @@ class CreateNewsTable extends Migration
             $table->integer('authorID') -> nullable();
             $table->string('authorName') -> nullable();
             $table->string('title');
+            $table->string('subtitle') -> nullable();
             $table->longText('content');
             $table->string('backgroundImage');
             $table->longText('styling');

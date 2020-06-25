@@ -1,8 +1,10 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
+            <router-link :to="{ name: 'homepage'}">
             <a class="navbar-brand js-scroll-trigger" id="brand" href="/">budrysek</a>
-            <button
+           </router-link>
+           <button
                 class="navbar-toggler navbar-toggler-right hamburger"
                 type="button"
                 data-toggle="collapse"
@@ -21,7 +23,7 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{ name: 'home' }">
+                        <router-link :to="{}">
                             <a class="nav-link js-scroll-trigger" href="/actions">Nasze akcje</a>
                         </router-link>
                     </li>
