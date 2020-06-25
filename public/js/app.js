@@ -2010,10 +2010,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 /* harmony default export */ __webpack_exports__["default"] = ({
-  props: ["image", "title", 'subtitle'],
+  props: ["image", "heightSize", "title", "subtitle"],
   data: function data() {
     return {
-      backgroundImage: "background-image: url('" + this.image + "');"
+      backgroundImage: "background-image: url('" + this.image + "');",
+      height: "height: " + this.heightSize + ";"
     };
   }
 });
@@ -2110,6 +2111,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -38787,15 +38789,19 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("header", { staticClass: "masthead", style: _vm.backgroundImage }, [
-    _c("div", { staticClass: "masthead-subheading" }, [
-      _vm._v(_vm._s(_vm.subtitle))
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "masthead-heading text-uppercase" }, [
-      _vm._v(_vm._s(_vm.title))
-    ])
-  ])
+  return _c(
+    "header",
+    { staticClass: "masthead", style: _vm.backgroundImage + _vm.height },
+    [
+      _c("div", { staticClass: "masthead-subheading" }, [
+        _vm._v(_vm._s(_vm.subtitle))
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "masthead-heading text-uppercase" }, [
+        _vm._v(_vm._s(_vm.title))
+      ])
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -38830,19 +38836,6 @@ var render = function() {
         "div",
         { staticClass: "container" },
         [
-          _vm._v("\n<<<<<<< HEAD\n            "),
-          _c("router-link", { attrs: { to: { name: "homepage" } } }, [
-            _c(
-              "a",
-              {
-                staticClass: "navbar-brand js-scroll-trigger",
-                attrs: { id: "brand", href: "/" }
-              },
-              [_vm._v("budrysek")]
-            )
-          ]),
-          _vm._v(" "),
-          _vm._v("\n=======\n            "),
           _c("router-link", { attrs: { to: { name: "homepage" } } }, [
             _c(
               "a",
@@ -38941,12 +38934,21 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("button", [
-      _vm._v(
-        '>>>>>> 31e11c1979455658253a3605b2b747ccea59249d\n                class="navbar-toggler navbar-toggler-right hamburger"\n                type="button"\n                data-toggle="collapse"\n                data-target="#navbarResponsive"\n                aria-controls="navbarResponsive"\n                aria-expanded="false"\n                aria-label="Toggle navigation"\n            >\n                '
-      ),
-      _c("i", { staticClass: "fas fa-bars ml-1" })
-    ])
+    return _c(
+      "button",
+      {
+        staticClass: "navbar-toggler navbar-toggler-right hamburger",
+        attrs: {
+          type: "button",
+          "data-toggle": "collapse",
+          "data-target": "#navbarResponsive",
+          "aria-controls": "navbarResponsive",
+          "aria-expanded": "false",
+          "aria-label": "Toggle navigation"
+        }
+      },
+      [_c("i", { staticClass: "fas fa-bars ml-1" })]
+    )
   },
   function() {
     var _vm = this
@@ -39099,11 +39101,271 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("Header", {
-    staticStyle: { "background-image": "url('../assets/img/bg-homepage.jpg')" }
-  })
+  return _c(
+    "div",
+    [
+      _c("Header", {
+        staticClass: "homepage",
+        attrs: {
+          image: "../assets/img/bg-homepage.jpg",
+          heightSize: "100vh",
+          subtitle: "Witamy na stronie Fundacji Budrysek"
+        }
+      }),
+      _vm._v(" "),
+      _vm._m(0)
+    ],
+    1
+  )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container" }, [
+      _c("div", { staticClass: "row text-center mt-5 mb-4" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", { staticClass: "mb-4" }, [_vm._v("Krótko o nas")]),
+          _vm._v(" "),
+          _c("p", [
+            _vm._v(
+              "Jesteśmy Fundacją założoną z końcem 2011 r. Jednak jako osoby prywatne, wszyscy byliśmy zaangażowani w pomoc bezdomnym zwierzętom już od kilku lat. Bardzo chętnie przyjmiemy w nasze szeregi wolontariuszy, osoby mogące przyjąć pod swój dach zwierzaka na czas jego rekonwalescencji i czekania na nowy, prawdziwy dom oraz wszystkie osoby, które chcą dać coś od siebie pokrzywdzonym zwierzętom. Jest wiele możliwości pomocy, które szczegółowo są opisane w poszczególnych zakładkach. Zwierzaki i my będziemy wdzięczni za każdą pomoc."
+            )
+          ]),
+          _vm._v(" "),
+          _c("h5", { staticClass: "mb-4" }, [
+            _c("a", { attrs: { href: "/aboutus" } }, [
+              _vm._v("Dowiedz sie więcej!")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row text-center mt-5 mb-5" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", { staticClass: "mb-4" }, [_vm._v("Nasi podopieczni")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: { src: "assets/img/bg2.jpg", alt: "Pupil 1" }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Pupil 1")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: { src: "assets/img/bg3.jpg", alt: "Pupil 2" }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Pupil 2")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: { src: "assets/img/bg.jpg", alt: "Pupil 3" }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Pupil 3")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row text-center mt-5 mb-5" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", { staticClass: "mb-4" }, [_vm._v("Ostatnie artykuły")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://img3.goodfon.com/wallpaper/nbig/2/2d/sobaka-zima-sneg-1.jpg",
+                  alt: "Post 1"
+                }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Post 1")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://img5.goodfon.com/wallpaper/nbig/e/84/sobaka-drug-ulitsa-9.jpg",
+                  alt: "Post 2"
+                }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Post 2")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://img5.goodfon.com/wallpaper/nbig/2/80/sobaka-drug-ulitsa-12.jpg",
+                  alt: "Post 3"
+                }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Post 3")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row text-center mt-5 mb-5" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", { staticClass: "mb-4" }, [_vm._v("Nadchodzące wydarzenia")]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://www.konferencje.pl/gfx/konferencje/userfiles/images/artykuly/event_czym_jest/flickr-event-9046311483_07467f3980_k.jpg",
+                  alt: "Wydarzenie 1"
+                }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Wydarzenie 1")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://muno.pl/wp-content/uploads/2019/08/TimBuiting.jpg",
+                  alt: "Wydarzenie 2"
+                }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Wydarzenie 2")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "div col-md-4 card card-header" }, [
+              _c("img", {
+                attrs: {
+                  src:
+                    "https://media4.s-nbcnews.com/i/newscms/2019_23/2885811/190606-border-collie-mc-1318_5b1706791f4ae9ddb3029540a98f7e08.JPG",
+                  alt: "Wydarzenie 3"
+                }
+              }),
+              _vm._v(" "),
+              _c("h4", { staticClass: "mt-4" }, [_vm._v("Wydarzenie 3")]),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _vm._v(
+                  "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ipsum, nostrum culpa eaque aliquam possimus?"
+                )
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("hr"),
+      _vm._v(" "),
+      _c("div", { staticClass: "row text-center mt-5 mb-4" }, [
+        _c("div", { staticClass: "col-md-12" }, [
+          _c("h4", { staticClass: "mb-4" }, [_vm._v("Jak nam możesz pomóc?")]),
+          _vm._v(" "),
+          _c("ul", [
+            _c("li", { staticClass: "list-style-none" }, [
+              _vm._v("Zostań wolontariuszem")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-style-none" }, [
+              _vm._v("Wpłać darowiznę na konto")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-style-none" }, [
+              _vm._v("Przynies jedzenie, żwirek, zabawki")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-style-none" }, [
+              _vm._v("Przynieś fanty na kiermasz Charity Shop")
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-style-none" }, [
+              _vm._v(
+                "Przynieś artykuły biurowe, oraz rzeczy z których zrobimy fanty"
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "list-style-none" }, [
+              _vm._v("Przekaż swój 1% naszej organizacji")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("h5", { staticClass: "mb-4" }, [
+            _c("a", { attrs: { href: "/help" } }, [
+              _vm._v("Dowiedz sie więcej!")
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -39128,25 +39390,15 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm._v("\n<<<<<<< HEAD\n        "),
       _c("Header", {
         staticClass: "headerImage",
         attrs: {
           title: _vm.article.title,
           subtitle: _vm.article.subtitle,
-          image: "../assets/img/pinkguy.png"
+          image: "../assets/img/bg3.jpg"
         }
       }),
-      _vm._v("\n=======\n        "),
-      _c("Header", {
-        staticClass: "headerImage",
-        attrs: {
-          title: "Lorem",
-          subtitle: "Ipsum",
-          image: "../assets/img/bg.jpg"
-        }
-      }),
-      _vm._v("\n>>>>>>> 31e11c1979455658253a3605b2b747ccea59249d\n        "),
+      _vm._v(" "),
       _c("div", { staticClass: "container" }, [
         _c(
           "div",
@@ -56554,8 +56806,8 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/karp/Dokumenty/budrysek/resources/js/app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! /home/karp/Dokumenty/budrysek/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/kamilk/GitHub/budrysek-www/resources/js/app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! /home/kamilk/GitHub/budrysek-www/resources/sass/app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
