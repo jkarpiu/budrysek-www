@@ -14,7 +14,7 @@
     <link rel="shortcut icon" type='image/x-icon' href="assets/img/favicon-white.ico" />
 
     <link rel="stylesheet" type="text/css" href="css/app.css">
-    <link rel="stylesheet" type="text/css" href="css/styles2.css">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/95a2d2c3f2.js" crossorigin="anonymous"></script>

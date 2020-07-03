@@ -1936,8 +1936,15 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     shorten: function shorten(arti) {
-      arti = arti.split(" ").splice(0, this.$store.state.config.lengthOfShortArticle).join(" ");
-      return arti;
+      // arti = arti
+      //     .split(" ")
+      //     .splice(0, this.$store.state.config.lengthOfShortArticle)
+      //     .join(" ");
+      // arti.split(" ").forEach(element => {
+      //     if (element.length > 10) console.log(element);
+      // });
+      arti = arti.slice(0, 103);
+      if (arti[arti.length - 1] == " ") return arti.slice(0, 102);else return arti;
     }
   }
 });
@@ -39025,7 +39032,7 @@ var render = function() {
                         "a",
                         {
                           staticClass: "nav-link js-scroll-trigger",
-                          attrs: { href: "/aboutus" }
+                          attrs: { href: "/about" }
                         },
                         [_vm._v("O nas")]
                       )
@@ -56313,7 +56320,7 @@ function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _d
 
 exports.config = {
   serverAdress: 'http://127.0.0.1:8000/',
-  lengthOfShortArticle: 64 //words
+  lengthOfShortArticle: 16 //words
 
 };
 

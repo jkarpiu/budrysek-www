@@ -17,7 +17,7 @@
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
                         <router-link :to="{ name: 'about' }">
-                            <a class="nav-link js-scroll-trigger" href="/aboutus">O nas</a>
+                            <a class="nav-link js-scroll-trigger" href="/about">O nas</a>
                         </router-link>
                     </li>
                     <li class="nav-item">

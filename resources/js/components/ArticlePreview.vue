@@ -27,11 +27,16 @@ export default {
     },
     methods: {
         shorten: function(arti) {
-            arti = arti
-                .split(" ")
-                .splice(0, this.$store.state.config.lengthOfShortArticle)
-                .join(" ");
-            return arti;
+            // arti = arti
+            //     .split(" ")
+            //     .splice(0, this.$store.state.config.lengthOfShortArticle)
+            //     .join(" ");
+            // arti.split(" ").forEach(element => {
+            //     if (element.length > 10) console.log(element);
+            // });
+            arti = arti.slice(0, 103);
+            if (arti[arti.length - 1] == " ") return arti.slice(0, 102);
+            else return arti;
         }
     }
 };
