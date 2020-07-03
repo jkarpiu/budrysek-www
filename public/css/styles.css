@@ -45,12 +45,6 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
-
 article,
 aside,
 figcaption,
@@ -104,20 +98,6 @@ address {
     margin-bottom: 1rem;
     font-style: normal;
     line-height: inherit;
-}
-
-ol,
-ul,
-dl {
-    margin-top: 0;
-    margin-bottom: 1rem;
-}
-
-ol ol,
-ul ul,
-ol ul,
-ul ol {
-    margin-bottom: 0;
 }
 
 dt {
@@ -195,11 +175,6 @@ pre {
 
 figure {
     margin: 0 0 1rem;
-}
-
-img {
-    vertical-align: middle;
-    border-style: none;
 }
 
 svg {
@@ -9726,40 +9701,6 @@ button.bg-dark:focus {
     .mx-xl-auto {
         margin-left: auto !important;
     }
-}
-
-.text-monospace {
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
-}
-
-.text-justify {
-    text-align: justify !important;
-}
-
-.text-wrap {
-    white-space: normal !important;
-}
-
-.text-nowrap {
-    white-space: nowrap !important;
-}
-
-.text-truncate {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.text-left {
-    text-align: left !important;
-}
-
-.text-right {
-    text-align: right !important;
-}
-
-.text-center {
-    text-align: center !important;
 }
 
 @media (min-width: 576px) {

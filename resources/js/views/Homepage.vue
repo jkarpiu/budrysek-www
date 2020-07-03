@@ -9,17 +9,18 @@
         <div class="container">
             <div class="row text-center mt-5 mb-4">
                 <div class="col-md-12">
-                    <h4 class="mb-4">Krótko o nas</h4>
+                    <h3 class="mb-3 text-underline">Krótko o nas</h3>
                     <p>Jesteśmy Fundacją założoną z końcem 2011 r. Jednak jako osoby prywatne, wszyscy byliśmy zaangażowani w pomoc bezdomnym zwierzętom już od kilku lat. Bardzo chętnie przyjmiemy w nasze szeregi wolontariuszy, osoby mogące przyjąć pod swój dach zwierzaka na czas jego rekonwalescencji i czekania na nowy, prawdziwy dom oraz wszystkie osoby, które chcą dać coś od siebie pokrzywdzonym zwierzętom. Jest wiele możliwości pomocy, które szczegółowo są opisane w poszczególnych zakładkach. Zwierzaki i my będziemy wdzięczni za każdą pomoc.</p>
                     <h5 class="mb-4">
-                        <a href="/aboutus">Dowiedz sie więcej!</a>
+                        <a href="/about">Dowiedz sie więcej!</a>
                     </h5>
                 </div>
             </div>
             <hr />
             <div class="row text-center mt-5 mb-5">
                 <div class="col-md-12">
-                    <h4 class="mb-4">Nasi podopieczni</h4>
+                    <h3 class="mb-4 text-underline">Nasi podopieczni</h3>
+
                     <div class="row">
                         <div class="div col-md-4 card card-header">
                             <img src="assets/img/bg2.jpg" alt="Pupil 1" />
@@ -48,7 +49,8 @@
             <hr />
             <div class="row text-center mt-5 mb-5">
                 <div class="col-md-12">
-                    <h4 class="mb-4">Ostatnie artykuły</h4>
+                    <h3 class="mb-4 text-underline">Ostatnie artykuły</h3>
+
                     <div class="row">
                         <div class="div col-md-4 card card-header">
                             <img
@@ -86,7 +88,8 @@
             <hr />
             <div class="row text-center mt-5 mb-5">
                 <div class="col-md-12">
-                    <h4 class="mb-4">Nadchodzące wydarzenia</h4>
+                    <h3 class="mb-4 text-underline">Nadchodzące wydarzenia</h3>
+
                     <div class="row">
                         <div class="div col-md-4 card card-header">
                             <img
@@ -124,7 +127,8 @@
             <hr />
             <div class="row text-center mt-5 mb-4">
                 <div class="col-md-12">
-                    <h4 class="mb-4">Jak nam możesz pomóc?</h4>
+                    <h3 class="mb-4 text-underline">Jak nam możesz pomóc?</h3>
+
                     <ul>
                         <li class="list-style-none">Zostań wolontariuszem</li>
                         <li class="list-style-none">Wpłać darowiznę na konto</li>

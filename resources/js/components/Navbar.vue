@@ -12,9 +12,7 @@
                 aria-controls="navbarResponsive"
                 aria-expanded="false"
                 aria-label="Toggle navigation"
-            >
-                <i class="fas fa-bars ml-1"></i>
-            </button>
+            ></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ml-auto">
                     <li class="nav-item">
@@ -23,12 +21,14 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <router-link :to="{}">
+                        <router-link :to="{ name: 'actions' }">
                             <a class="nav-link js-scroll-trigger" href="/actions">Nasze akcje</a>
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/animals">Nasi podopieczni</a>
+                        <router-link :to="{ name: 'animals' }">
+                            <a class="nav-link js-scroll-trigger" href="/animals">Nasi podopieczni</a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
                         <router-link :to="{ name: 'single-article' }">
@@ -36,10 +36,14 @@
                         </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/contact">Kontakt</a>
+                        <router-link :to="{ name: 'contact' }">
+                            <a class="nav-link js-scroll-trigger" href="/contact">Kontakt</a>
+                        </router-link>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="/help">Wsparcie</a>
+                        <router-link :to="{ name: 'help' }">
+                            <a class="nav-link js-scroll-trigger" href="/help">Wsparcie</a>
+                        </router-link>
                     </li>
                 </ul>
             </div>
