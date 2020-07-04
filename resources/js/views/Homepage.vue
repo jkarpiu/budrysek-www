@@ -130,14 +130,14 @@
                     <h3 class="mb-4 text-underline">Jak nam możesz pomóc?</h3>
 
                     <ul>
-                        <li class="list-style-none">Zostań wolontariuszem</li>
-                        <li class="list-style-none">Wpłać darowiznę na konto</li>
-                        <li class="list-style-none">Przynies jedzenie, żwirek, zabawki</li>
-                        <li class="list-style-none">Przynieś fanty na kiermasz Charity Shop</li>
+                        <li class="list-style-none">&#9658; Zostań wolontariuszem</li>
+                        <li class="list-style-none">&#9658; Wpłać darowiznę na konto</li>
+                        <li class="list-style-none">&#9658; Przynies jedzenie, żwirek, zabawki</li>
+                        <li class="list-style-none">&#9658; Przynieś fanty na kiermasz Charity Shop</li>
                         <li
                             class="list-style-none"
-                        >Przynieś artykuły biurowe, oraz rzeczy z których zrobimy fanty</li>
-                        <li class="list-style-none">Przekaż swój 1% naszej organizacji</li>
+                        >&#9658; Przynieś artykuły biurowe, oraz rzeczy z których zrobimy fanty</li>
+                        <li class="list-style-none">&#9658; Przekaż swój 1% naszej organizacji</li>
                     </ul>
                     <h5 class="mb-4">
                         <a href="/help">Dowiedz sie więcej!</a>

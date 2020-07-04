@@ -1,6 +1,6 @@
 <template>
     <div>
-        <Header class="headerImage" title="Nasi podopieczni" image="../assets/img/bg-help.jpg" />
+        <Header class="headerImage" title="Nasi podopieczni" image="../assets/img/bg-animals.jpg" />
     </div>
 </template>
 
