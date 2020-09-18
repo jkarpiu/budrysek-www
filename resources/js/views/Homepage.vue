@@ -1,11 +1,6 @@
 <template>
     <div>
-        <Header
-            image="../assets/img/bg-homepage.jpg"
-            heightSize="100vh"
-            subtitle="Witamy na stronie Fundacji Budrysek"
-            class="homepage"
-        />
+        <Header image="../assets/img/bg-homepage.jpg" heightSize="100vh" class="homepage" />
         <div class="container">
             <div class="row text-center mt-5 mb-4">
                 <div class="col-md-12">

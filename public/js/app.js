@@ -39389,9 +39389,7 @@ var staticRenderFns = [
             ])
           ])
         ])
-      ]),
-      _vm._v(" "),
-      _c("hr")
+      ])
     ])
   }
 ]
@@ -39942,11 +39940,7 @@ var render = function() {
     [
       _c("Header", {
         staticClass: "homepage",
-        attrs: {
-          image: "../assets/img/bg-homepage.jpg",
-          heightSize: "100vh",
-          subtitle: "Witamy na stronie Fundacji Budrysek"
-        }
+        attrs: { image: "../assets/img/bg-homepage.jpg", heightSize: "100vh" }
       }),
       _vm._v(" "),
       _vm._m(0)
