@@ -8,8 +8,10 @@ class Protege extends Model
 {
     protected $table = "proteges";
 
-    public function getPhotoAttribute($value): string
+    public function setPhotoAttribute($value)
     {
-        return "/storage/" . $value;
+        if(!str_contains($value, "storage"))
+            $value = '/storage/'. $value;
+        $this->attributes['photo'] = $value;
     }
 }
