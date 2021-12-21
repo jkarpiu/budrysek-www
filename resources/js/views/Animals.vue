@@ -21,7 +21,7 @@ import axios from "axios";
 import Protege from "../components/Protege";
 
 export default {
-    components: [Protege],
+    components: {Protege},
     data() {
         return {
             animals: []

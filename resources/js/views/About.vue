@@ -133,7 +133,8 @@
 
 .pe img {
     width: 360px;
-    height: 360px;
+    object-fit: cover;
+    max-height: 360px;
 }
 
 .p-name {
