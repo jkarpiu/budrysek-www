@@ -20,7 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/news', 'newsController@list');
 
-Route::get('/prodeges', 'prodegesController@list');
+Route::get('/proteges', 'ProtegesController@list');
 
 Route::get('/content', 'pagesController@list');
 

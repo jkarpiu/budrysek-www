@@ -43,7 +43,7 @@ return [
 
     'models' => [
         'namespace' => 'App\news',
-        'namespace' => 'App\prodeges'
+        'namespace' => 'App\Protege'
     ],
 
     /*
